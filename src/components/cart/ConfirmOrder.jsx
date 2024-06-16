@@ -41,6 +41,7 @@ const ConfirmOrder = () => {
           total
         )
       );
+      dispatch({ type: "emptyItems" });
       // console.log({
       //   shippingInfo,
       //   cartItems,
@@ -99,6 +100,8 @@ const ConfirmOrder = () => {
       };
       var razorpay = new window.Razorpay(options);
       razorpay.open();
+
+      dispatch({ type: "emptyItems" });
     }
   };
 

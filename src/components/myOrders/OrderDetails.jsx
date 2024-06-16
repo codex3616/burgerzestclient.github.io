@@ -58,7 +58,7 @@ const OrderDetails = () => {
               </p>
               <p>
                 <b>Delliverd At </b>
-                {order.deliveredAt.split("T")[0]}
+                {order.deliveredAt ? order.deliveredAt.split("T")[0] : "NA"}
               </p>
             </div>
 
