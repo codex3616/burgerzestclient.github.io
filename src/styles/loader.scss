@@ -1,0 +1,36 @@
+@import "colors";
+
+.loader {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > svg {
+    font-size: 15rem;
+    color: $red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate((-50%, -50%));
+    opacity: 0.3;
+  }
+  > div {
+    font-size: 2rem;
+  }
+
+  // modification part...
+  .blink-1 {
+    animation: blink-1 1.7s infinite both;
+  }
+  @keyframes blink-1 {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+}
